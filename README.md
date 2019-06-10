@@ -1,2 +1,2 @@
-# bibliography
+# Bibliography
 My bibtex files
