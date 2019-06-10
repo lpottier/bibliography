@@ -1,0 +1,250 @@
+@phdthesis{pottier2018,
+  TITLE = {{Co-scheduling for large-scale applications: memory and resilience}},
+  AUTHOR = {Pottier, Lo{\"i}c},
+  URL = {https://tel.archives-ouvertes.fr/tel-01892395},
+  NUMBER = {2018LYSEN039},
+  SCHOOL = {{Universit{\'e} de Lyon}},
+  YEAR = {2018},
+  MONTH = Sep,
+  KEYWORDS = {mine, Co-scheduling algorithm, Memory hierarchy, Cache memory, Scheduling, Resilience, High performance computing, HPC, Memory, Many-core, Ordonnancement concurrent, Hi{\'e}rarchie m{\'e}moire, Algorithme d'ordonnancement, R{\'e}silience, Informatique haute performance, Ant{\'e}m{\'e}moire},
+  TYPE = {Theses},
+  PDF = {https://tel.archives-ouvertes.fr/tel-01892395/file/POTTIER_Loic_2018LYSEN039_These.pdf},
+  HAL_ID = {tel-01892395},
+  HAL_VERSION = {v1},
+}
+
+@article{ijhpca2019cmp,
+  author    = {Aupy, Guillaume and Benoit, Anne and Goglin, Brice and Pottier, Loïc and Robert, Yves},
+  year      = {2019},
+  month     = {04},
+  title     = {Co-scheduling HPC workloads on cache-partitioned CMP platforms},
+  journal   = {International Journal of High Performance Computing Applications},
+  pages     = {0},
+  volume    = {0},
+  number    = {0},
+  doi       = {10.1177/1094342019846956},
+  url       = {https://doi.org/10.1177/1094342019846956},
+  eprint    = {https://doi.org/10.1177/1094342019846956},
+  abstract  = { With the recent advent of many-core architectures such as chip multiprocessors (CMPs), the number of processing units accessing a global shared memory is constantly increasing. Co-scheduling techniques are used to improve application throughput on such architectures, but sharing resources often generates critical interferences. In this article, we focus on the interferences in the last level of cache (LLC) and use the Cache Allocation Technology (CAT) recently provided by Intel to partition the LLC and give each co-scheduled application their own cache area. We consider m iterative HPC applications running concurrently and answer to the following questions: (i) How to precisely model the behavior of these applications on the cache-partitioned platform? and (ii) how many cores and cache fractions should be assigned to each application to maximize the platform efficiency? Here, platform efficiency is defined as maximizing the performance either globally, or as guaranteeing a fixed ratio of iterations per second for each application. Through extensive experiments using CAT, we demonstrate the impact of cache partitioning when multiple HPC applications are co-scheduled onto CMP platforms. },
+  keywords = {mine},
+}
+}
+
+@article{ijhpca2018resilience,
+  author    = {Anne Benoit and
+               Lo{\"{\i}}c Pottier and
+               Yves Robert},
+  title     = {Resilient co-scheduling of malleable applications},
+  journal   = {International Journal of High Performance Computing and Applications},
+  volume    = {32},
+  number    = {1},
+  pages     = {89--103},
+  year      = {2018},
+  doi       = {10.1177/1094342017704979},
+  url       = {https://doi.org/10.1177/1094342017704979},
+  eprint    = {https://doi.org/10.1177/1094342017704979},
+  abstract = { Recently, the benefits of co-scheduling several applications have been demonstrated in a fault-free context, both in terms of performance and energy savings. However, large-scale computer systems are confronted by frequent failures, and resilience techniques must be employed for large applications to execute efficiently. Indeed, failures may create severe imbalance between applications and significantly degrade performance. In this article, we aim at minimizing the expected completion time of a set of co-scheduled applications. We propose to redistribute the resources assigned to each application upon the occurrence of failures, and upon the completion of some applications, in order to achieve this goal. First, we introduce a formal model and establish complexity results. The problem is NP-complete for malleable applications, even in a fault-free context. Therefore, we design polynomial-time heuristics that perform redistributions and account for processor failures. A fault simulator is used to perform extensive simulations that demonstrate the usefulness of redistribution and the performance of the proposed heuristics. },
+  keywords = {mine},
+}
+
+@article{ijhpca2018cache,
+  author    = {Guillaume Aupy and
+               Anne Benoit and
+               Sicheng Dai and
+               Lo{\"{\i}}c Pottier and
+               Padma Raghavan and
+               Yves Robert and
+               Manu Shantharam},
+  title     = {Co-scheduling Amdahl applications on cache-partitioned systems},
+  journal   = {International Journal of High Performance Computing and Applications},
+  volume    = {32},
+  number    = {1},
+  pages     = {123--138},
+  year      = {2018},
+  url       = {https://doi.org/10.1177/1094342017710806},
+  doi       = {10.1177/1094342017710806},
+  abstract = { Cache-partitioned architectures allow subsections of the shared last-level cache (LLC) to be exclusively reserved for some applications. This technique dramatically limits interactions between applications that are concurrently executing on a multicore machine. Consider n applications that execute concurrently, with the objective to minimize the makespan, defined as the maximum completion time of the n applications. Key scheduling questions are as follows: (i) which proportion of cache and (ii) how many processors should be given to each application? In this article, we provide answers to (i) and (ii) for Amdahl applications. Even though the problem is shown to be NP-complete, we give key elements to determine the subset of applications that should share the LLC (while remaining ones only use their smaller private cache). Building upon these results, we design efficient heuristics for Amdahl applications. Extensive simulations demonstrate the usefulness of co-scheduling when our efficient cache partitioning strategies are deployed. },
+  keywords = {mine},
+}
+
+@inproceedings{cluster18,
+  author    = {Guillaume Aupy and
+               Anne Benoit and
+               Brice Goglin and
+               Loic Pottier and
+               Yves Robert},
+  title     = {Co-Scheduling {HPC} Workloads on Cache-Partitioned {CMP} Platforms},
+  booktitle = {{IEEE} International Conference on Cluster Computing, {CLUSTER} 2018,
+               Belfast, UK, September 10-13, 2018},
+  pages     = {348--358},
+  publisher = {{IEEE} Computer Society},
+  year      = {2018},
+  url       = {https://doi.org/10.1109/CLUSTER.2018.00052},
+  doi       = {10.1109/CLUSTER.2018.00052},
+  abstract  = {Co-scheduling techniques are used to improve the throughput of applications on chip multiprocessors (CMP), but sharing resources often generates critical interferences. We focus on the interferences in the last level of cache (LLC) and use the Cache Allocation Technology (CAT) recently provided by Intel to partition the LLC and give each co-scheduled application their own cache area. We consider m iterative HPC applications running concurrently and answer the following questions: (i) how to precisely model the behavior of these applications on the cache partitioned platform? and (ii) how many cores and cache fractions should be assigned to each application to maximize the platform efficiency? Here, platform efficiency is defined as maximizing the performance either globally, or as guaranteeing a fixed ratio of iterations per second for each application. Through extensive experiments using CAT, we demonstrate the impact of cache partitioning when multiple HPC application are co-scheduled onto CMP platforms.},
+  keywords = {mine},
+}
+
+@inproceedings{icpp2018,
+  author    = {Anne Benoit and
+               Swann Perarnau and
+               Lo{\"{\i}}c Pottier and
+               Yves Robert},
+  title     = {A Performance Model to Execute Workflows on High-Bandwidth-Memory
+               Architectures},
+  booktitle = {Proceedings of the 47th International Conference on Parallel Processing,
+               {ICPP} 2018, Eugene, OR, USA, August 13-16, 2018},
+  pages     = {36:1--36:10},
+  articleno = {36},
+  publisher = {{ACM}},
+  address = {New York, NY, USA},
+  acmid     = {3225110},
+  isbn      = {978-1-4503-6510-9},
+  location  = {Eugene, OR, USA},
+  year      = {2018},
+  url       = {https://doi.org/10.1145/3225058.3225110},
+  doi       = {10.1145/3225058.3225110},
+  abstract  = {This work presents a realistic performance model to execute scientific workflows on high-bandwidth-memory architectures such as the Intel Knights Landing. We provide a detailed analysis of the execution time on such platforms, taking into account transfers from both fast and slow memory and their overlap with computations. We discuss several scheduling and mapping strategies: not only tasks must be assigned to computing resources, but also one has to decide which fraction of input and output data will reside in fast memory and which will have to stay in slow memory. We use extensive simulations to assess the impact of the mapping strategies on performance. We also conduct experiments for a simple 1D Gauss-Seidel kernel, which assess the accuracy of the model and further demonstrate the importance of a tuned memory management. Our model and results lay the foundations for further studies and experiments on dual-memory systems.},
+  keywords = {mine},
+}
+
+@inproceedings{apdcm2017,
+  author    = {Guillaume Aupy and
+               Anne Benoit and
+               Lo{\"{\i}}c Pottier and
+               Padma Raghavan and
+               Yves Robert and
+               Manu Shantharam},
+  title     = {Co-Scheduling Algorithms for Cache-Partitioned Systems},
+  booktitle = {2017 {IEEE} International Parallel and Distributed Processing Symposium
+               Workshops, {IPDPS} Workshops 2017, Orlando / Buena Vista, FL, USA,
+               May 29 - June 2, 2017},
+  pages     = {874--883},
+  publisher = {{IEEE} Computer Society},
+  year      = {2017},
+  month     = {05},
+  location  = {Lake Buena Vista, FL, USA},
+  url       = {https://doi.org/10.1109/IPDPSW.2017.60},
+  doi       = {10.1109/IPDPSW.2017.60},
+  issn      = {},
+  isbn      = {978-1-5386-3408-0}, 
+  abstract  = {Cache-partitioned architectures allow subsections of the shared last-level cache (LLC) to be exclusively reserved for some applications. This technique dramatically limits interactions between applications that are concurrently executing on a multicore machine. Consider n applications that execute concurrently, with the objective to minimize the makespan, defined as the maximum completion time of the n applications. Key scheduling questions are: (i) which proportion of cache and (ii) how many processors should be given to each application? Here, we assign rational numbers of processors to each application, since they can be shared across applications through multi-threading. In this paper, we provide answers to (i) and (ii) for perfectly parallel applications. Even though the problem is shown to be NP-complete, we give key elements to determine the subset of applications that should share the LLC (while remaining ones only use their smaller private cache). Building upon these results, we design efficient heuristics for general applications. Extensive simulations demonstrate the usefulness of co-scheduling when our efficient cache partitioning strategies are deployed.},
+  keywords = {mine},
+}
+
+@inproceedings{icpp2016,
+  author    = {Anne Benoit and
+               Lo{\"{\i}}c Pottier and
+               Yves Robert},
+  title     = {Resilient Application Co-scheduling with Processor Redistribution},
+  booktitle = {45th International Conference on Parallel Processing, {ICPP} 2016,
+               Philadelphia, PA, USA, August 16-19, 2016},
+  pages     = {123--132},
+  publisher = {{IEEE} Computer Society},
+  year      = {2016},
+  month     = {08},
+  location  = {Philadelphia, PA, USA},
+  url       = {https://doi.org/10.1109/ICPP.2016.21},
+  doi       = {10.1109/ICPP.2016.21},
+  issn      = {2332-5690},
+  isbn      = {978-1-5090-2823-8}, 
+  abstract  = {Recently, the benefits of co-scheduling several applications have been demonstrated in a fault-free context, both in terms of performance and energy savings. However, large-scale computer systems are confronted to frequent failures, and resilience techniques must be employed to ensure the completion of large applications. Indeed, failures may create severe imbalance between applications, and significantly degrade performance. In this paper, we propose to redistribute the resources assigned to each application upon the striking of failures, in order to minimize the expected completion time of a set of co-scheduled applications. First, we introduce a formal model and establish complexity results. When no redistribution is allowed, we can minimize the expected completion time in polynomial time, while the problem becomes NP-complete with redistributions, even in a fault-free context. Therefore, we design polynomial-time heuristics that perform redistributions and account for processor failures. A fault simulator is used to perform extensive simulations that demonstrate the usefulness of redistribution and the performance of the proposed heuristics.},
+  keywords = {mine},
+}
+
+
+@incollection{chapter2016crc,
+  author    = {Guillaume Aupy and Anne Benoit and Lo{\"i}c Pottier and Padma Raghavan and Yves Robert and Manu Shantharam},
+  booktitle = {Big Data Management and Processing},
+  publisher = {Chapman and Hall/CRC Press},
+  editor    = {Kuan-Ching Li and Hai Jiang and Albert Zomaya},
+  title     = {{Co-scheduling high-performance computing applications}},
+  chapter   = {5},
+  pages     = {81--104},
+  month     = {05},
+  year      = {2017},
+  doi       = {10.1201/9781315154008-5},
+  url       = {https://doi.org/10.1201/9781315154008-5},
+  abstract  = {Big data applications play an increasing role in high-performance computing. They are perfect candidates for co-scheduling, as they obey flexible speedup models, alternating I/O operations and intensive computation phases. In this chapter, we discuss co-scheduling on failure-prone platforms. Checkpointing helps to mitigate the impact of a failure on a given application, but it must be complemented by redistributions to rebalance the load among all applications. Co-scheduling usually involves partitioning the applications into packs, and then scheduling each pack in sequence, as efficiently as possible. The objective is therefore to determine a partition into packs, and an assignment of processors to applications, that minimize the sum of the execution times of the packs. On the theoretical side, we assess the problem complexity. On the practical side, we design several polynomial-time heuristics to deal with the general problem with failures and redistribution costs. The proposed heuristics show very good performance while executing in very short time, hence validating the approach.},
+  keywords = {mine},
+}
+
+@techreport{hal-8795,
+	TITLE = {{Resilient application co-scheduling with processor redistribution}},
+	AUTHOR = {{Anne Benoit} and Lo{\"i}c Pottier and Yves Robert},
+	url = {https://hal.inria.fr/hal-01219258},
+	type = {Research Report},
+	number = {RR-8795},
+	institution = {{INRIA Grenoble - Rhone-Alpes ; ENS de Lyon}},
+	year = {2015},
+	month = Oct,
+	keywords = {mine, Resilience, co-scheduling, redistribution, complexity results, heuristics, simulations},
+	pdf = {https://hal.inria.fr/hal-01219258/file/RR-8795.pdf},
+	hal_id = {hal-01219258},
+	hal_version = {v1},
+}
+
+@techreport{hal-8965,
+	TITLE = {{Co-scheduling algorithms for cache-partitioned systems}},
+	AUTHOR = {{Guillaume Aupy} and Anne Benoit and Lo{\"i}c Pottier and Padma Raghavan and Yves Robert and Manu Shantharam},
+	url = {https://hal.inria.fr/hal-01393989},
+	type = {Research Report},
+	number = {RR-8965},
+	pages = {28},
+	institution = {{INRIA Grenoble - Rhone-Alpes ; ENS de Lyon}},
+	year = {2016},
+	month = Nov,
+	pdf = {https://hal.inria.fr/hal-01393989/file/RR-8965.pdf},
+	hal_id = {hal-01393989},
+	hal_version = {v1},
+	keywords = {mine}
+}
+
+
+@techreport{hal-9021,
+	TITLE = {{Co-scheduling Amdahl applications on cache-partitioned systems}},
+	AUTHOR = {{Guillaume Aupy} and Anne Benoit and Sicheng Dai and Lo{\"i}c Pottier and Padma Raghavan and Yves Robert and Manu Shantharam},
+	url = {https://hal.inria.fr/hal-01461157},
+	type = {Research Report},
+	number = {RR-9021},
+	pages = {33},
+	institution = {{INRIA Grenoble - Rhone-Alpes ; ENS de Lyon}},
+	year = {2017},
+	month = Feb,
+	keywords = {mine, complexity results, co-scheduling, cache partitioning},
+	pdf = {https://hal.inria.fr/hal-01461157/file/RR-9021.pdf},
+	hal_id = {hal-01461157},
+	hal_version = {v1},
+}
+
+@techreport{hal-9154,
+	TITLE = {{Co-scheduling HPC workloads on cache-partitioned CMP platforms}},
+	AUTHOR = {Aupy, Guillaume and Benoit, Anne and Goglin, Brice and Pottier, Lo{\"i}c and Robert, Yves},
+	URL = {https://hal.inria.fr/hal-01719728},
+	TYPE = {Research Report},
+	NUMBER = {RR-9154},
+	INSTITUTION = {{Inria}},
+	YEAR = {2018},
+	MONTH = Feb,
+	KEYWORDS = {mine},
+	PDF = {https://hal.inria.fr/hal-01719728/file/RR-9154.pdf},
+	HAL_ID = {hal-01719728},
+	HAL_VERSION = {v1},
+}
+
+@techreport{hal-9165,
+  TITLE = {{A performance model to execute workflows on high-bandwidth memory architectures}},
+  AUTHOR = {Benoit, Anne and Perarnau, Swann and Pottier, Lo{\"i}c and Robert, Yves},
+  URL = {https://hal.inria.fr/hal-01767888},
+  TYPE = {Research Report},
+  NUMBER = {RR-9165},
+  PAGES = {1-28},
+  INSTITUTION = {{ENS Lyon ; Inria Grenoble Rh{\^o}ne-Alpes ; University of Tennessee Knoxville ; Georgia Institute of Technology ; Argonne National Laboratory}},
+  YEAR = {2018},
+  MONTH = Apr,
+  KEYWORDS = {mine, high-bandwidth memory, performance model, Workflow, task graph, scheduling, mapping, memory hierarchy, manycore, mod{\`e}le de performance, graphe de t{\^a}ches, ordonnancement, placement de donn{\'e}es, hi{\'e}rarchie m{\'e}moire, architecture massivement parall{\`e}le, m{\'e}moire haute performance},
+  PDF = {https://hal.inria.fr/hal-01767888/file/RR-9165.pdf},
+  HAL_ID = {hal-01767888},
+  HAL_VERSION = {v1},
+}
+
