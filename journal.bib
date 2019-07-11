@@ -1,5 +1,5 @@
 @article{ijhpca2019cmp,
-  author    = {Aupy, Guillaume and Benoit, Anne and Goglin, Brice and Pottier, Loïc and Robert, Yves},
+  author    = {Aupy, Guillaume and Benoit, Anne and Goglin, Brice and Pottier, Lo{\"i}c and Robert, Yves},
   year      = {2019},
   month     = {04},
   title     = {Co-scheduling HPC workloads on cache-partitioned CMP platforms},
@@ -11,13 +11,13 @@
   url       = {https://doi.org/10.1177/1094342019846956},
   eprint    = {https://doi.org/10.1177/1094342019846956},
   abstract  = { With the recent advent of many-core architectures such as chip multiprocessors (CMPs), the number of processing units accessing a global shared memory is constantly increasing. Co-scheduling techniques are used to improve application throughput on such architectures, but sharing resources often generates critical interferences. In this article, we focus on the interferences in the last level of cache (LLC) and use the Cache Allocation Technology (CAT) recently provided by Intel to partition the LLC and give each co-scheduled application their own cache area. We consider m iterative HPC applications running concurrently and answer to the following questions: (i) How to precisely model the behavior of these applications on the cache-partitioned platform? and (ii) how many cores and cache fractions should be assigned to each application to maximize the platform efficiency? Here, platform efficiency is defined as maximizing the performance either globally, or as guaranteeing a fixed ratio of iterations per second for each application. Through extensive experiments using CAT, we demonstrate the impact of cache partitioning when multiple HPC applications are co-scheduled onto CMP platforms. },
-  keywords = {mine},
+  keywords = {mine,ensl},
 }
 }
 
 @article{ijhpca2018resilience,
   author    = {Anne Benoit and
-               Lo{\"{\i}}c Pottier and
+               Lo{\"i}c Pottier and
                Yves Robert},
   title     = {Resilient co-scheduling of malleable applications},
   journal   = {International Journal of High Performance Computing and Applications},
@@ -29,14 +29,14 @@
   url       = {https://doi.org/10.1177/1094342017704979},
   eprint    = {https://doi.org/10.1177/1094342017704979},
   abstract = { Recently, the benefits of co-scheduling several applications have been demonstrated in a fault-free context, both in terms of performance and energy savings. However, large-scale computer systems are confronted by frequent failures, and resilience techniques must be employed for large applications to execute efficiently. Indeed, failures may create severe imbalance between applications and significantly degrade performance. In this article, we aim at minimizing the expected completion time of a set of co-scheduled applications. We propose to redistribute the resources assigned to each application upon the occurrence of failures, and upon the completion of some applications, in order to achieve this goal. First, we introduce a formal model and establish complexity results. The problem is NP-complete for malleable applications, even in a fault-free context. Therefore, we design polynomial-time heuristics that perform redistributions and account for processor failures. A fault simulator is used to perform extensive simulations that demonstrate the usefulness of redistribution and the performance of the proposed heuristics. },
-  keywords = {mine},
+  keywords = {mine,ensl},
 }
 
 @article{ijhpca2018cache,
   author    = {Guillaume Aupy and
                Anne Benoit and
                Sicheng Dai and
-               Lo{\"{\i}}c Pottier and
+               Lo{\"i}c Pottier and
                Padma Raghavan and
                Yves Robert and
                Manu Shantharam},
@@ -49,5 +49,5 @@
   url       = {https://doi.org/10.1177/1094342017710806},
   doi       = {10.1177/1094342017710806},
   abstract = { Cache-partitioned architectures allow subsections of the shared last-level cache (LLC) to be exclusively reserved for some applications. This technique dramatically limits interactions between applications that are concurrently executing on a multicore machine. Consider n applications that execute concurrently, with the objective to minimize the makespan, defined as the maximum completion time of the n applications. Key scheduling questions are as follows: (i) which proportion of cache and (ii) how many processors should be given to each application? In this article, we provide answers to (i) and (ii) for Amdahl applications. Even though the problem is shown to be NP-complete, we give key elements to determine the subset of applications that should share the LLC (while remaining ones only use their smaller private cache). Building upon these results, we design efficient heuristics for Amdahl applications. Extensive simulations demonstrate the usefulness of co-scheduling when our efficient cache partitioning strategies are deployed. },
-  keywords = {mine},
+  keywords = {mine,ensl},
 }
