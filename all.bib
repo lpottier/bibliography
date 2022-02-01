@@ -5,104 +5,94 @@
   NUMBER = {2018LYSEN039},
   SCHOOL = {{Universit{\'e} de Lyon}},
   YEAR = {2018},
-  MONTH = Sep,
-  KEYWORDS = {mine,ensl, Co-scheduling algorithm, Memory hierarchy, Cache memory, Scheduling, Resilience, High performance computing, HPC, Memory, Many-core, Ordonnancement concurrent, Hi{\'e}rarchie m{\'e}moire, Algorithme d'ordonnancement, R{\'e}silience, Informatique haute performance, Ant{\'e}m{\'e}moire},
+  MONTH = {9},
+  KEYWORDS = {mine,ensl,Co-scheduling algorithm, Memory hierarchy, Cache memory, Scheduling, Resilience, High performance computing, HPC, Memory, Many-core, Ordonnancement concurrent, Hi{\'e}rarchie m{\'e}moire, Algorithme d'ordonnancement, R{\'e}silience, Informatique haute performance, Ant{\'e}m{\'e}moire},
   TYPE = {Theses},
   PDF = {https://tel.archives-ouvertes.fr/tel-01892395/file/POTTIER_Loic_2018LYSEN039_These.pdf},
   HAL_ID = {tel-01892395},
   HAL_VERSION = {v1},
 }
 
-@incollection{chapter2016crc,
-  author    = {Guillaume Aupy and Anne Benoit and Lo{\"i}c Pottier and Padma Raghavan and Yves Robert and Manu Shantharam},
-  booktitle = {Big Data Management and Processing},
-  publisher = {Chapman and Hall/CRC Press},
-  editor    = {Kuan-Ching Li and Hai Jiang and Albert Zomaya},
-  title     = {{Co-scheduling high-performance computing applications}},
-  chapter   = {5},
-  pages     = {81--104},
-  month     = {05},
-  year      = {2017},
-  doi       = {10.1201/9781315154008-5},
-  url       = {https://doi.org/10.1201/9781315154008-5},
-  abstract  = {Big data applications play an increasing role in high-performance computing. They are perfect candidates for co-scheduling, as they obey flexible speedup models, alternating I/O operations and intensive computation phases. In this chapter, we discuss co-scheduling on failure-prone platforms. Checkpointing helps to mitigate the impact of a failure on a given application, but it must be complemented by redistributions to rebalance the load among all applications. Co-scheduling usually involves partitioning the applications into packs, and then scheduling each pack in sequence, as efficiently as possible. The objective is therefore to determine a partition into packs, and an assignment of processors to applications, that minimize the sum of the execution times of the packs. On the theoretical side, we assess the problem complexity. On the practical side, we design several polynomial-time heuristics to deal with the general problem with failures and redistribution costs. The proposed heuristics show very good performance while executing in very short time, hence validating the approach.},
-  keywords = {mine,ensl},
+@article{coleman-fgcs-2022,
+  title = {WfCommons: A framework for enabling scientific workflow research and development},
+  journal = {Future Generation Computer Systems},
+  volume = {128},
+  pages = {16-27},
+  year = {2022},
+  issn = {0167-739X},
+  doi = {10.1016/j.future.2021.09.043},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167739X21003897},
+  author = {Tain\~a Coleman and Henri Casanova and Lo{\"i}c Pottier and Manav Kaushik and Ewa Deelman and Rafael {Ferreira da Silva}},
+  keywords = {Scientific workflows, Workflow management systems, Simulation, Distributed computing, Workflow instances},
+  note={Funding Acknowledgments: NSF 1923539},
+  keywords = {mine,isi},
 }
 
-@article{do2020jocs,
-  title = {A Lightweight Method for Evaluating In Situ Workflow Efficiency},
-  author = {Do, Tu Mai Anh and Pottier, Lo\"ic and Ca\'ino-Lores, Silvina and Ferreira da Silva, Rafael and Cuendet, Michel A. and Weinstein, Harel and Estrada, Trilce and Taufer, Michela and Deelman, Ewa},
-  journal = {Journal of Computational Science},
-  volume = {},
-  number = {},
-  pages = {},
-  year = {2020},
-  doi = {10.1016/j.jocs.2020.101259},
-  note={Funding Acknowledgments: NSF 1741040, DOE DE-SC0012636}
+@inproceedings{community2021works,
+  title = {A Community Roadmap for Scientific Workflows Research and Development},
+  author = {Ferreira da Silva, Rafael and Casanova, Henri and Chard, Kyle and Altintas, Ilkay and Badia, Rosa M and Balis, Bartosz and Coleman, Tain\~a and Coppens, Frederik and Di Natale, Frank and Enders, Bjoern and Fahringer, Thomas and Filgueira, Rosa and Fursin, Grigori and Garijo, Daniel and Goble, Carole and Howell, Dorran and Jha, Shantenu and Katz, Daniel S. and Laney, Daniel and Leser, Ulf and Malawski, Maciej and Mehta, Kshitij and Pottier, Lo{\"i}c and Ozik, Jonathan and Peterson, J. Luc and Ramakrishnan, Lavanya and Soiland-Reyes, Stian and Thain, Douglas and Wolf, Matthew},
+  booktitle = {2021 IEEE Workshop on Workflows in Support of Large-Scale Science (WORKS)},
+  pages = {81--90},
+  year = {2021},
+  keywords = {mine,workshop,isi},
+  doi = {10.1109/WORKS54523.2021.00016}
 }
 
-@article{ijhpca2019cmp,
-  author    = {Aupy, Guillaume and Benoit, Anne and Goglin, Brice and Pottier, Lo{\"i}c and Robert, Yves},
-  year      = {2019},
-  month     = {04},
-  title     = {Co-scheduling HPC workloads on cache-partitioned CMP platforms},
-  journal   = {International Journal of High Performance Computing Applications},
-  pages     = {0},
-  volume    = {0},
-  number    = {0},
-  doi       = {10.1177/1094342019846956},
-  url       = {https://doi.org/10.1177/1094342019846956},
-  eprint    = {https://doi.org/10.1177/1094342019846956},
-  abstract  = { With the recent advent of many-core architectures such as chip multiprocessors (CMPs), the number of processing units accessing a global shared memory is constantly increasing. Co-scheduling techniques are used to improve application throughput on such architectures, but sharing resources often generates critical interferences. In this article, we focus on the interferences in the last level of cache (LLC) and use the Cache Allocation Technology (CAT) recently provided by Intel to partition the LLC and give each co-scheduled application their own cache area. We consider m iterative HPC applications running concurrently and answer to the following questions: (i) How to precisely model the behavior of these applications on the cache-partitioned platform? and (ii) how many cores and cache fractions should be assigned to each application to maximize the platform efficiency? Here, platform efficiency is defined as maximizing the performance either globally, or as guaranteeing a fixed ratio of iterations per second for each application. Through extensive experiments using CAT, we demonstrate the impact of cache partitioning when multiple HPC applications are co-scheduled onto CMP platforms. },
-  keywords = {mine,ensl},
+@techreport{wcs2021technical,
+  author    = {Ferreira da Silva, Rafael and Casanova, Henri and Chard, Kyle and Coleman, Tain\={a} and Laney, Dan and Ahn, Dong and Jha, Shantenu and Howell, Dorran and Soiland-Reys, Stian and Altintas, Ilkay and Thain, Douglas and Filgueira, Rosa and Babuji, Yadu and Badia, Rosa M. and Balis, Bartosz and Caino-Lores, Silvina and Callaghan, Scott and Coppens, Frederik and Crusoe, Michael R. and De, Kaushik and Di Natale, Frank and Do, Tu M. A. and Enders, Bjoern and Fahringer, Thomas and Fouilloux, Anne and Fursin, Grigori and Gaignard, Alban and Ganose, Alex and Garijo, Daniel and Gesing, Sandra and Goble, Carole and Hasan, Adil and Huber, Sebastiaan and Katz, Daniel S. and Leser, Ulf and Lowe, Douglas and Ludaescher, Bertram and Maheshwari, Ketan and Malawski, Maciej and Mayani, Rajiv and Mehta, Kshitij and Merzky, Andre and Munson, Todd and Ozik, Jonathan and Pottier, Lo\"{i}c and Ristov, Sashko and Roozmeh, Mehdi and Souza, Renan and Suter, Fr\'ed\'eric and Tovar, Benjamin and Turilli, Matteo and Vahi, Karan and Vidal-Torreira, Alvaro and Whitcup, Wendy and Wilde, Michael and Williams, Alan and Wolf, Matthew and Wozniak, Justin},
+  title     = {{Workflows Community Summit: Advancing the State-of-the-art of Scientific Workflows Management Systems Research and Development}},
+  month     = {5},
+  year      = {2021},
+  publisher = {Zenodo},
+  keywords  = {mine,whitereport,isi},
+  doi       = {10.5281/zenodo.4915801}
 }
 
-
-@article{ijhpca2018resilience,
-  author    = {Anne Benoit and
-               Lo{\"i}c Pottier and
-               Yves Robert},
-  title     = {Resilient co-scheduling of malleable applications},
-  journal   = {International Journal of High Performance Computing and Applications},
-  volume    = {32},
-  number    = {1},
-  pages     = {89--103},
-  year      = {2018},
-  doi       = {10.1177/1094342017704979},
-  url       = {https://doi.org/10.1177/1094342017704979},
-  eprint    = {https://doi.org/10.1177/1094342017704979},
-  abstract = { Recently, the benefits of co-scheduling several applications have been demonstrated in a fault-free context, both in terms of performance and energy savings. However, large-scale computer systems are confronted by frequent failures, and resilience techniques must be employed for large applications to execute efficiently. Indeed, failures may create severe imbalance between applications and significantly degrade performance. In this article, we aim at minimizing the expected completion time of a set of co-scheduled applications. We propose to redistribute the resources assigned to each application upon the occurrence of failures, and upon the completion of some applications, in order to achieve this goal. First, we introduce a formal model and establish complexity results. The problem is NP-complete for malleable applications, even in a fault-free context. Therefore, we design polynomial-time heuristics that perform redistributions and account for processor failures. A fault simulator is used to perform extensive simulations that demonstrate the usefulness of redistribution and the performance of the proposed heuristics. },
-  keywords = {mine,ensl},
+@techreport{ferreiradasilva2021wcs,
+  author = {Ferreira da Silva, Rafael and Casanova, Henri and Chard, Kyle and Laney, Dan and Ahn, Dong and Jha, Shantenu and Goble, Carole and Ramakrishnan, Lavanya and eerson, Luc and Enders, Bjoern and Thain, Douglas and Altintas, Ilkay and Babuji, Yadu and Badia, Rosa and Bonazzi, Vivien and Coleman, Taina and Crusoe, Michael and Deelman, Ewa and Di Natale, Frank and Di Tommaso, Paolo and Fahringer, Thomas and Filgueira, Rosa and Fursin, Grigori and Ganose, Alex and Gruning, Bjorn and Katz, Daniel S. and Kuchar, Olga and Kupresanin, Ana and Ludascher, Bertram and Maheshwari, Ketan and Mattoso, Marta and Mehta, Kshitij and Munson, Todd and Ozik, Jonathan and Peterka, Tom and Pottier, Lo{\"i}c and Randles, Tim and Soiland-Reyes, Stian and Tovar, Benjamin and Turilli, Matteo and Uram, Thomas and Vahi, Karan and Wilde, Michael and Wolf, Matthew and Wozniak, Justin},
+  title = {{Workflows Community Summit: Bringing the Scientific Workflows Community Together}},
+  month = {3},
+  year = {2021},
+  publisher = {Zenodo},
+  keywords = {mine,whitereport,isi},
+  doi = {10.5281/zenodo.4606958}
 }
 
-@article{ijhpca2018cache,
-  author    = {Guillaume Aupy and
-               Anne Benoit and
-               Sicheng Dai and
-               Lo{\"i}c Pottier and
-               Padma Raghavan and
-               Yves Robert and
-               Manu Shantharam},
-  title     = {Co-scheduling Amdahl applications on cache-partitioned systems},
-  journal   = {International Journal of High Performance Computing and Applications},
-  volume    = {32},
-  number    = {1},
-  pages     = {123--138},
-  year      = {2018},
-  url       = {https://doi.org/10.1177/1094342017710806},
-  doi       = {10.1177/1094342017710806},
-  abstract = { Cache-partitioned architectures allow subsections of the shared last-level cache (LLC) to be exclusively reserved for some applications. This technique dramatically limits interactions between applications that are concurrently executing on a multicore machine. Consider n applications that execute concurrently, with the objective to minimize the makespan, defined as the maximum completion time of the n applications. Key scheduling questions are as follows: (i) which proportion of cache and (ii) how many processors should be given to each application? In this article, we provide answers to (i) and (ii) for Amdahl applications. Even though the problem is shown to be NP-complete, we give key elements to determine the subset of applications that should share the LLC (while remaining ones only use their smaller private cache). Building upon these results, we design efficient heuristics for Amdahl applications. Extensive simulations demonstrate the usefulness of co-scheduling when our efficient cache partitioning strategies are deployed. },
-  keywords = {mine,ensl},
+@inproceedings{krawczuk-works-2021,
+    title = {A Performance Characterization of Scientific Machine Learning Workflows},
+    author = {Krawczuk, Patrycja and Papadimitriou, George and Tanaka, Ryan and Do, Tu Mai Anh and
+    Subramany, Srujana and Nagarkar, Shubham and Jain, Aditi and Lam, Kelsie and Mandal, Anirban and
+    Pottier, Lo{\"i}c and Deelman, Ewa},
+    booktitle = {2021 IEEE/ACM Workflows in Support of Large-Scale Science (WORKS)},
+    year = {2021},
+    pages = {58-65},
+    keywords = {mine,workshop,isi},
+    doi = {10.1109/WORKS54523.2021.00013},
+    note = {Funding Acknowledgments: DOE DE-SC0012636, NSF 1664162}
+}
+
+@article{do-jocs-2021,
+    title = {A Lightweight Method for Evaluating In Situ Workflow Efficiency},
+    author = {Do, Tu Mai Anh and Pottier, Lo{\"i}c and Ca\'ino-Lores, Silvina and Ferreira da Silva, Rafael and Cuendet, Michel A. and Weinstein, Harel and Estrada, Trilce and Taufer, Michela and Deelman, Ewa},
+    journal = {Journal of Computational Science},
+    volume = {48},
+    number = {},
+    pages = {101259},
+    year = {2021},
+    doi = {10.1016/j.jocs.2020.101259},
+    keywords = {mine,isi},
+    note = {Funding Acknowledgments: NSF 1741040, DOE DE-SC0012636}
 }
 
 @inproceedings{do2020iccs,
-  author={Do, Tu Mai Anh and Pottier, Loic and Thomas, Stephen and Ferreira da Silva, Rafael and Cuendet, Michel A. and Weinstein, Harel and Estrada, Trilce and Taufer, Michela and Deelman, Ewa},
+  author={Do, Tu Mai Anh and Pottier, Lo{\"i}c and Thomas, Stephen and Ferreira da Silva, Rafael and Cuendet, Michel A. and Weinstein, Harel and Estrada, Trilce and Taufer, Michela and Deelman, Ewa},
   title={A Novel Metric to Evaluate In Situ Workflows},
   booktitle={International Conference on Computational Science (ICCS)},
   year={2020},
   pages={538--553},
   doi={10.1007/978-3-030-50371-0_40},
-  note={Funding Acknowledgments: NSF 1741040}
+  note={Funding Acknowledgments: NSF 1741040},
+  keywords = {mine,isi},
 }
 
 @inproceedings{ferreiradasilva2020works,
@@ -112,17 +102,19 @@
   year = {2020},
   pages = {49--56},
   doi = {10.1109/WORKS51914.2020.00012},
-  note = {Funding Acknowledgments: NSF 2016619, DOE DE-SC0012636, NSF 1664162, NSF 1923539}
+  note = {Funding Acknowledgments: NSF 2016619, DOE DE-SC0012636, NSF 1664162, NSF 1923539},
+  keywords = {mine,isi,workshop},
 }
 
 @inproceedings{pottier2020cluster,
-  author = {Pottier, Loic and Ferreira da Silva, Rafael and Casanova, Henri and Deelman, Ewa},
+  author = {Pottier, Lo{\"i}c and Ferreira da Silva, Rafael and Casanova, Henri and Deelman, Ewa},
   title = {Modeling the Performance of Scientific Workflow Executions on HPC Platforms with Burst Buffers},
   booktitle = {2020 IEEE International Conference on Cluster Computing (CLUSTER)},
   year = {2020},
   pages = {92--103},
   doi = {10.1109/CLUSTER49012.2020.00019},
-  note = {Funding Acknowledgments: DOE DE-SC0012636, NSF 1664162, NSF 1741040, NSF 1923539, NSF 1923621}
+  note = {Funding Acknowledgments: DOE DE-SC0012636, NSF 1664162, NSF 1741040, NSF 1923539, NSF 1923621},
+  keywords = {mine,isi},
 }
 
 @inproceedings{deelman-escience-2019,
@@ -145,7 +137,7 @@
   pages = {},
   doi = {},
   note = {Funding Acknowledgments: NSF 1842042},
-  keywords = {mine,isi},
+  keywords = {mine,isi,workshop},
 }
 
 @inproceedings{thomas-escience-2019,
@@ -174,6 +166,59 @@
   url       = {https://doi.org/10.1109/CLUSTER.2018.00052},
   doi       = {10.1109/CLUSTER.2018.00052},
   abstract  = {Co-scheduling techniques are used to improve the throughput of applications on chip multiprocessors (CMP), but sharing resources often generates critical interferences. We focus on the interferences in the last level of cache (LLC) and use the Cache Allocation Technology (CAT) recently provided by Intel to partition the LLC and give each co-scheduled application their own cache area. We consider m iterative HPC applications running concurrently and answer the following questions: (i) how to precisely model the behavior of these applications on the cache partitioned platform? and (ii) how many cores and cache fractions should be assigned to each application to maximize the platform efficiency? Here, platform efficiency is defined as maximizing the performance either globally, or as guaranteeing a fixed ratio of iterations per second for each application. Through extensive experiments using CAT, we demonstrate the impact of cache partitioning when multiple HPC application are co-scheduled onto CMP platforms.},
+  keywords = {mine,ensl},
+}
+
+@article{ijhpca2018resilience,
+  author    = {Anne Benoit and
+               Lo{\"i}c Pottier and
+               Yves Robert},
+  title     = {Resilient co-scheduling of malleable applications},
+  journal   = {International Journal of High Performance Computing and Applications},
+  volume    = {32},
+  number    = {1},
+  pages     = {89--103},
+  year      = {2018},
+  doi       = {10.1177/1094342017704979},
+  url       = {https://doi.org/10.1177/1094342017704979},
+  eprint    = {https://doi.org/10.1177/1094342017704979},
+  abstract = { Recently, the benefits of co-scheduling several applications have been demonstrated in a fault-free context, both in terms of performance and energy savings. However, large-scale computer systems are confronted by frequent failures, and resilience techniques must be employed for large applications to execute efficiently. Indeed, failures may create severe imbalance between applications and significantly degrade performance. In this article, we aim at minimizing the expected completion time of a set of co-scheduled applications. We propose to redistribute the resources assigned to each application upon the occurrence of failures, and upon the completion of some applications, in order to achieve this goal. First, we introduce a formal model and establish complexity results. The problem is NP-complete for malleable applications, even in a fault-free context. Therefore, we design polynomial-time heuristics that perform redistributions and account for processor failures. A fault simulator is used to perform extensive simulations that demonstrate the usefulness of redistribution and the performance of the proposed heuristics. },
+  keywords = {mine,ensl},
+}
+
+@article{ijhpca2019cmp,
+  author    = {Aupy, Guillaume and Benoit, Anne and Goglin, Brice and Pottier, Lo{\"i}c and Robert, Yves},
+  year      = {2019},
+  month     = {04},
+  title     = {Co-scheduling HPC workloads on cache-partitioned CMP platforms},
+  journal   = {International Journal of High Performance Computing Applications},
+  pages     = {0},
+  volume    = {0},
+  number    = {0},
+  doi       = {10.1177/1094342019846956},
+  url       = {https://doi.org/10.1177/1094342019846956},
+  eprint    = {https://doi.org/10.1177/1094342019846956},
+  abstract  = { With the recent advent of many-core architectures such as chip multiprocessors (CMPs), the number of processing units accessing a global shared memory is constantly increasing. Co-scheduling techniques are used to improve application throughput on such architectures, but sharing resources often generates critical interferences. In this article, we focus on the interferences in the last level of cache (LLC) and use the Cache Allocation Technology (CAT) recently provided by Intel to partition the LLC and give each co-scheduled application their own cache area. We consider m iterative HPC applications running concurrently and answer to the following questions: (i) How to precisely model the behavior of these applications on the cache-partitioned platform? and (ii) how many cores and cache fractions should be assigned to each application to maximize the platform efficiency? Here, platform efficiency is defined as maximizing the performance either globally, or as guaranteeing a fixed ratio of iterations per second for each application. Through extensive experiments using CAT, we demonstrate the impact of cache partitioning when multiple HPC applications are co-scheduled onto CMP platforms. },
+  keywords = {mine,ensl},
+}
+
+@article{ijhpca2018cache,
+  author    = {Guillaume Aupy and
+               Anne Benoit and
+               Sicheng Dai and
+               Lo{\"i}c Pottier and
+               Padma Raghavan and
+               Yves Robert and
+               Manu Shantharam},
+  title     = {Co-scheduling Amdahl applications on cache-partitioned systems},
+  journal   = {International Journal of High Performance Computing and Applications},
+  volume    = {32},
+  number    = {1},
+  pages     = {123--138},
+  year      = {2018},
+  url       = {https://doi.org/10.1177/1094342017710806},
+  doi       = {10.1177/1094342017710806},
+  abstract = { Cache-partitioned architectures allow subsections of the shared last-level cache (LLC) to be exclusively reserved for some applications. This technique dramatically limits interactions between applications that are concurrently executing on a multicore machine. Consider n applications that execute concurrently, with the objective to minimize the makespan, defined as the maximum completion time of the n applications. Key scheduling questions are as follows: (i) which proportion of cache and (ii) how many processors should be given to each application? In this article, we provide answers to (i) and (ii) for Amdahl applications. Even though the problem is shown to be NP-complete, we give key elements to determine the subset of applications that should share the LLC (while remaining ones only use their smaller private cache). Building upon these results, we design efficient heuristics for Amdahl applications. Extensive simulations demonstrate the usefulness of co-scheduling when our efficient cache partitioning strategies are deployed. },
   keywords = {mine,ensl},
 }
 
@@ -221,6 +266,22 @@
   issn      = {},
   isbn      = {978-1-5386-3408-0}, 
   abstract  = {Cache-partitioned architectures allow subsections of the shared last-level cache (LLC) to be exclusively reserved for some applications. This technique dramatically limits interactions between applications that are concurrently executing on a multicore machine. Consider n applications that execute concurrently, with the objective to minimize the makespan, defined as the maximum completion time of the n applications. Key scheduling questions are: (i) which proportion of cache and (ii) how many processors should be given to each application? Here, we assign rational numbers of processors to each application, since they can be shared across applications through multi-threading. In this paper, we provide answers to (i) and (ii) for perfectly parallel applications. Even though the problem is shown to be NP-complete, we give key elements to determine the subset of applications that should share the LLC (while remaining ones only use their smaller private cache). Building upon these results, we design efficient heuristics for general applications. Extensive simulations demonstrate the usefulness of co-scheduling when our efficient cache partitioning strategies are deployed.},
+  keywords = {mine,ensl},
+}
+
+@incollection{chapter2016crc,
+  author    = {Guillaume Aupy and Anne Benoit and Lo{\"i}c Pottier and Padma Raghavan and Yves Robert and Manu Shantharam},
+  booktitle = {Big Data Management and Processing},
+  publisher = {Chapman and Hall/CRC Press},
+  editor    = {Kuan-Ching Li and Hai Jiang and Albert Zomaya},
+  title     = {{Co-scheduling high-performance computing applications}},
+  chapter   = {5},
+  pages     = {81--104},
+  month     = {05},
+  year      = {2017},
+  doi       = {10.1201/9781315154008-5},
+  url       = {https://doi.org/10.1201/9781315154008-5},
+  abstract  = {Big data applications play an increasing role in high-performance computing. They are perfect candidates for co-scheduling, as they obey flexible speedup models, alternating I/O operations and intensive computation phases. In this chapter, we discuss co-scheduling on failure-prone platforms. Checkpointing helps to mitigate the impact of a failure on a given application, but it must be complemented by redistributions to rebalance the load among all applications. Co-scheduling usually involves partitioning the applications into packs, and then scheduling each pack in sequence, as efficiently as possible. The objective is therefore to determine a partition into packs, and an assignment of processors to applications, that minimize the sum of the execution times of the packs. On the theoretical side, we assess the problem complexity. On the practical side, we design several polynomial-time heuristics to deal with the general problem with failures and redistribution costs. The proposed heuristics show very good performance while executing in very short time, hence validating the approach.},
   keywords = {mine,ensl},
 }
 
